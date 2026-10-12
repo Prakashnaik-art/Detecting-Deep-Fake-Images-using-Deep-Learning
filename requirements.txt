@@ -1,10 +1,12 @@
 Flask
 python-dotenv
+gunicorn
 torch
 torchvision
-opencv-python
+opencv-python-headless
 Pillow
 numpy
 scikit-learn
 matplotlib
 tqdm
+realitydefender
