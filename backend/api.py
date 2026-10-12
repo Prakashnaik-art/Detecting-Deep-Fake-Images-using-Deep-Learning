@@ -4,12 +4,7 @@ import cv2
 from flask import Blueprint, jsonify, request
 
 from config import API_KEY
-
-from predictor import load_predictor
-
-from utils import (
-    save_uploaded_file,
-)
+from utils import save_uploaded_file
 
 
 # ============================================================
@@ -24,13 +19,6 @@ api = Blueprint(
 
 
 # ============================================================
-# LOAD PREDICTOR
-# ============================================================
-
-predictor = load_predictor()
-
-
-# ============================================================
 # API KEY AUTHENTICATION
 # ============================================================
 
@@ -39,32 +27,21 @@ def require_api_key(function):
     @wraps(function)
     def decorated(*args, **kwargs):
 
-        provided_key = request.headers.get(
-            "X-API-Key"
-        )
+        provided_key = request.headers.get("X-API-Key")
 
         if not provided_key:
-
-            return jsonify(
-                {
-                    "success": False,
-                    "error": "API key is required.",
-                }
-            ), 401
+            return jsonify({
+                "success": False,
+                "error": "API key is required.",
+            }), 401
 
         if provided_key != API_KEY:
+            return jsonify({
+                "success": False,
+                "error": "Invalid API key.",
+            }), 403
 
-            return jsonify(
-                {
-                    "success": False,
-                    "error": "Invalid API key.",
-                }
-            ), 403
-
-        return function(
-            *args,
-            **kwargs
-        )
+        return function(*args, **kwargs)
 
     return decorated
 
@@ -73,30 +50,24 @@ def require_api_key(function):
 # HEALTH CHECK
 # ============================================================
 
-@api.route(
-    "/health",
-    methods=["GET"]
-)
+@api.route("/health", methods=["GET"])
 def health():
 
-    return jsonify(
-        {
-            "success": True,
-            "status": "DeepGuard API is running.",
-        }
-    )
+    return jsonify({
+        "success": True,
+        "status": "DeepGuard API is running.",
+    })
 
 
 # ============================================================
 # PREDICT
 # ============================================================
 
-@api.route(
-    "/predict",
-    methods=["POST"]
-)
+@api.route("/predict", methods=["POST"])
 @require_api_key
 def predict():
+
+    file_path = None
 
     try:
 
@@ -105,87 +76,84 @@ def predict():
         # ----------------------------------------------------
 
         if "file" not in request.files:
-
-            return jsonify(
-                {
-                    "success": False,
-                    "error": "No image file provided.",
-                }
-            ), 400
+            return jsonify({
+                "success": False,
+                "error": "No image file provided.",
+            }), 400
 
         file = request.files["file"]
 
         if not file.filename:
-
-            return jsonify(
-                {
-                    "success": False,
-                    "error": "Filename is empty.",
-                }
-            ), 400
+            return jsonify({
+                "success": False,
+                "error": "Filename is empty.",
+            }), 400
 
         # ----------------------------------------------------
         # Save uploaded image
         # ----------------------------------------------------
 
-        file_path = save_uploaded_file(
-            file
-        )
+        file_path = save_uploaded_file(file)
 
         # ----------------------------------------------------
         # Read image
         # ----------------------------------------------------
 
-        image = cv2.imread(
-            str(file_path)
-        )
+        image = cv2.imread(str(file_path))
 
         if image is None:
-
-            return jsonify(
-                {
-                    "success": False,
-                    "error": "Could not read the uploaded image.",
-                }
-            ), 400
+            return jsonify({
+                "success": False,
+                "error": "Could not read the uploaded image.",
+            }), 400
 
         # ----------------------------------------------------
-        # Run DeepGuard prediction
+        # Load predictor only when prediction is requested
         # ----------------------------------------------------
 
-        result = predictor.predict(
-            image
-        )
+        from predictor import load_predictor
+
+        predictor = load_predictor()
+
+        # ----------------------------------------------------
+        # Run prediction
+        # ----------------------------------------------------
+
+        result = predictor.predict(image)
 
         # ----------------------------------------------------
         # API response
         # ----------------------------------------------------
 
-        return jsonify(
-            {
-                "success": True,
-                "prediction": result["label"],
-            }
-        )
+        return jsonify({
+            "success": True,
+            "prediction": result["label"],
+        })
 
     except ValueError as error:
 
-        return jsonify(
-            {
-                "success": False,
-                "error": str(error),
-            }
-        ), 400
+        return jsonify({
+            "success": False,
+            "error": str(error),
+        }), 400
 
-    except Exception as error:
+    except Exception:
+        from flask import current_app
 
-        print(
-            f"Prediction error: {error}"
+        current_app.logger.exception(
+            "DeepGuard prediction failed"
         )
 
-        return jsonify(
-            {
-                "success": False,
-                "error": "An internal prediction error occurred.",
-            }
-        ), 500
+        return jsonify({
+            "success": False,
+            "error": "An internal prediction error occurred.",
+        }), 500
+
+    finally:
+
+        # ----------------------------------------------------
+        # Clean up uploaded temporary file
+        # ----------------------------------------------------
+
+        if file_path is not None:
+            file_path.unlink(missing_ok=True)
