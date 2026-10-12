@@ -1,10 +1,8 @@
-
 import sys
 from pathlib import Path
 
 import cv2
 from PIL import Image
-from torchvision import transforms
 
 from flask import (
     Flask,
@@ -15,6 +13,7 @@ from flask import (
     flash,
     send_from_directory,
 )
+
 
 # ============================================================
 # PROJECT PATHS
@@ -28,8 +27,9 @@ if str(PROJECT_ROOT) not in sys.path:
 TEMPLATE_DIR = PROJECT_ROOT / "frontend" / "templates"
 STATIC_DIR = PROJECT_ROOT / "frontend" / "static"
 
+
 # ============================================================
-# IMPORTS
+# BACKEND IMPORTS
 # ============================================================
 
 from backend.config import (
@@ -41,21 +41,6 @@ from backend.config import (
 from backend.api import api
 from backend.external_detector import analyze_image_sync
 from backend.utils import save_uploaded_file
-from backend.model import load_model
-
-
-# ============================================================
-# HEATMAP PREPROCESSING
-# ============================================================
-
-IMAGE_TRANSFORM = transforms.Compose([
-    transforms.Resize((224, 224)),
-    transforms.ToTensor(),
-    transforms.Normalize(
-        mean=[0.485, 0.456, 0.406],
-        std=[0.229, 0.224, 0.225],
-    ),
-])
 
 
 # ============================================================
@@ -63,6 +48,7 @@ IMAGE_TRANSFORM = transforms.Compose([
 # ============================================================
 
 def create_app():
+
     app = Flask(
         __name__,
         template_folder=str(TEMPLATE_DIR),
@@ -75,8 +61,49 @@ def create_app():
 
     app.register_blueprint(api)
 
-    # Load the local explanation model once.
-    heatmap_model = load_model()
+    # The heatmap model is intentionally not loaded at startup.
+    heatmap_model = None
+    image_transform = None
+
+    # --------------------------------------------------------
+    # LAZY-LOAD LOCAL MODEL AND TRANSFORM
+    # --------------------------------------------------------
+
+    def get_heatmap_resources():
+
+        nonlocal heatmap_model, image_transform
+
+        if heatmap_model is None:
+            app.logger.info(
+                "Loading local heatmap model for the first time..."
+            )
+
+            from backend.model import load_model
+            from torchvision import transforms
+            from training.config import (
+                IMAGE_SIZE,
+                IMAGENET_MEAN,
+                IMAGENET_STD,
+            )
+
+            image_transform = transforms.Compose([
+                transforms.Resize(
+                    (IMAGE_SIZE, IMAGE_SIZE)
+                ),
+                transforms.ToTensor(),
+                transforms.Normalize(
+                    mean=IMAGENET_MEAN,
+                    std=IMAGENET_STD,
+                ),
+            ])
+
+            heatmap_model = load_model()
+
+            app.logger.info(
+                "Local heatmap model loaded successfully."
+            )
+
+        return heatmap_model, image_transform
 
     # --------------------------------------------------------
     # HOME
@@ -95,14 +122,18 @@ def create_app():
         return render_template("detect.html")
 
     # --------------------------------------------------------
-    # PREDICT + GENERATE HEATMAP
+    # PREDICT AND GENERATE HEATMAP
     # --------------------------------------------------------
 
     @app.route("/web-predict", methods=["POST"])
     def web_predict():
+
         image_path = None
+        heatmap_path = None
 
         try:
+
+            # Validate upload
             if "file" not in request.files:
                 flash("Please select an image to analyze.")
                 return redirect(url_for("detect_page"))
@@ -119,20 +150,25 @@ def create_app():
                 len(extension) != 2
                 or extension[1].lower() not in ALLOWED_EXTENSIONS
             ):
-                flash("Please upload a JPG, JPEG, PNG, or WEBP image.")
+                flash(
+                    "Please upload a JPG, JPEG, PNG, or WEBP image."
+                )
                 return redirect(url_for("detect_page"))
 
-            image_path = Path(save_uploaded_file(uploaded_file))
+            # Save and validate image
+            image_path = Path(
+                save_uploaded_file(uploaded_file)
+            )
 
-            # Validate uploaded image.
             image = cv2.imread(str(image_path))
 
             if image is None:
-                image_path.unlink(missing_ok=True)
-                flash("The uploaded file is not a valid readable image.")
+                flash(
+                    "The uploaded file is not a valid readable image."
+                )
                 return redirect(url_for("detect_page"))
 
-            # Reality Defender remains the prediction source.
+            # Reality Defender is the prediction source
             external_result = analyze_image_sync(str(image_path))
             status = external_result.get("status")
 
@@ -141,26 +177,29 @@ def create_app():
                     "Reality Defender did not return a detection status."
                 )
 
-            # Generate a separate local-model explanation.
+            # Load the local model only when heatmap generation
+            # is requested by an actual image submission.
+            model, transform = get_heatmap_resources()
+
             with Image.open(image_path) as source:
                 image_rgb = source.convert("RGB")
-                image_tensor = IMAGE_TRANSFORM(image_rgb)
+                image_tensor = transform(image_rgb)
 
-            local_prediction = heatmap_model.predict(image_tensor)
+            # Local model provides the heatmap explanation
+            local_prediction = model.predict(image_tensor)
 
             heatmap_path = (
                 Path(UPLOAD_DIR)
                 / f"{image_path.stem}_heatmap.jpg"
             )
 
-            heatmap_model.generate_heatmap(
+            model.generate_heatmap(
                 image_tensor=image_tensor,
                 original_image_path=image_path,
                 output_path=heatmap_path,
                 target_class=local_prediction,
             )
 
-            # Do not pass the numerical Reality Defender score.
             return render_template(
                 "result.html",
                 prediction=status,
@@ -173,20 +212,31 @@ def create_app():
             )
 
         except ValueError as error:
-            app.logger.warning("Image analysis input error: %s", error)
+            app.logger.warning(
+                "Image analysis input error: %s",
+                error,
+            )
             flash(str(error))
             return redirect(url_for("detect_page"))
 
         except Exception:
-            app.logger.exception("DeepGuard image analysis failed")
+            app.logger.exception(
+                "DeepGuard image analysis failed"
+            )
             flash(
                 "Image analysis or heatmap generation failed. "
                 "Please try again."
             )
             return redirect(url_for("detect_page"))
 
+        finally:
+            # Clean up the original upload after processing.
+            # Keep the heatmap because the result page displays it.
+            if image_path is not None:
+                image_path.unlink(missing_ok=True)
+
     # --------------------------------------------------------
-    # SERVE UPLOADED IMAGES AND HEATMAPS
+    # SERVE UPLOADED HEATMAPS
     # --------------------------------------------------------
 
     @app.route("/uploads/<path:filename>")
@@ -216,10 +266,11 @@ app = create_app()
 
 
 # ============================================================
-# RUN SERVER
+# RUN SERVER LOCALLY
 # ============================================================
 
 if __name__ == "__main__":
+
     print("=" * 60)
     print("DeepGuard Backend")
     print("=" * 60)
