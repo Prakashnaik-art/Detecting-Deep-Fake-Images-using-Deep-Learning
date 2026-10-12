@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analysis Result | DeepGuard</title>
 
-    <link
-        rel="stylesheet"
-        href="{{ url_for('static', filename='css/style.css') }}"
-    >
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 
     <style>
         .result-wrapper {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -37,28 +35,67 @@
             line-height: 1.7;
         }
 
-        .image-preview {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 28px;
-            padding: 16px;
-            min-height: 180px;
+        /* Original image and Grad-CAM heatmap */
+        .explanation-heading {
+            margin-top: 30px;
+            font-size: 20px;
+            color: #102030;
+        }
+
+        .explanation-description {
+            margin-top: 8px;
+            color: #66788a;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .image-comparison {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .image-panel {
+            min-width: 0;
+            padding: 15px;
             border: 1px solid #dce5eb;
             border-radius: 14px;
             background: #f7fafc;
         }
 
-        .image-preview img {
-            display: block;
-            max-width: 100%;
-            max-height: 500px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
+        .image-panel h3 {
+            margin: 0 0 12px;
+            font-size: 15px;
+            color: #243b4d;
         }
 
+        .image-frame {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+            overflow: hidden;
+            border-radius: 9px;
+            background: #e9eff4;
+        }
+
+        .image-frame img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 460px;
+            object-fit: contain;
+        }
+
+        .image-caption {
+            margin-top: 10px;
+            color: #66788a;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        /* Prediction panel */
         .prediction-section {
             margin-top: 28px;
             padding: 22px;
@@ -116,6 +153,7 @@
             line-height: 1.7;
         }
 
+        /* Navigation buttons */
         .result-actions {
             display: flex;
             flex-wrap: wrap;
@@ -145,6 +183,7 @@
             background: #f1f5f9;
         }
 
+        /* Model performance */
         .performance-card {
             margin-top: 28px;
             padding: 30px;
@@ -264,6 +303,10 @@
                 font-size: 27px;
             }
 
+            .image-comparison {
+                grid-template-columns: 1fr;
+            }
+
             .result-metrics {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
@@ -290,13 +333,11 @@
 <body>
 <main class="page-container">
 
-    <!-- HEADER -->
+    <!-- Header -->
     <header class="site-header">
-        <a
-            href="{{ url_for('home') }}"
-            class="brand"
-            style="text-decoration:none;color:white;"
-        >
+        <a href="{{ url_for('home') }}"
+           class="brand"
+           style="text-decoration:none;color:white;">
             <div class="brand-icon">DG</div>
             <div>
                 <h1>DeepGuard</h1>
@@ -307,53 +348,98 @@
 
     <div class="result-wrapper">
 
-        <!-- IMAGE RESULT -->
+        <!-- Image analysis result -->
         <section class="result-card">
+
             <span class="hero-badge">ANALYSIS COMPLETE</span>
 
             <h2 class="result-title">Image Analysis Result</h2>
 
             <p class="result-description">
-                The prediction below is provided by the external
-                image analysis service. The trained model's evaluation
-                results are shown separately.
+                DeepGuard uses a trained EfficientNet-B0 model to classify
+                images as AUTHENTIC or MANIPULATED and generate a Grad-CAM
+                heatmap showing the image regions that influenced its
+                prediction.
             </p>
 
-            <div class="image-preview">
-                <img
-                    src="{{ url_for('uploaded_image', filename=image_filename) }}"
-                    alt="Image analyzed by DeepGuard"
-                >
+            <!-- Original image and heatmap -->
+            <h3 class="explanation-heading">Image Explanation</h3>
+
+            <p class="explanation-description">
+                Compare the original image with the Grad-CAM heatmap to
+                understand which regions influenced DeepGuard's prediction.
+                Warmer colors highlight areas that contributed more strongly
+                to the model's classification. The heatmap provides a visual
+                explanation and does not directly identify manipulated regions.
+            </p>
+
+            <div class="image-comparison">
+
+                <div class="image-panel">
+                    <h3>Original Image</h3>
+
+                    <div class="image-frame">
+                        <img
+                            src="{{ url_for('uploaded_image', filename=image_filename) }}"
+                            alt="Original image analyzed by DeepGuard">
+                    </div>
+
+                    <p class="image-caption">
+                        The original uploaded image.
+                    </p>
+                </div>
+
+                <div class="image-panel">
+                    <h3>Grad-CAM Heatmap</h3>
+
+                    <div class="image-frame">
+                        {% if heatmap_filename %}
+                            <img
+                                src="{{ url_for('uploaded_image', filename=heatmap_filename) }}"
+                                alt="Grad-CAM heatmap generated by EfficientNet-B0">
+                        {% else %}
+                            <p>Heatmap is not available for this image.</p>
+                        {% endif %}
+                    </div>
+
+                    <p class="image-caption">
+                        Heatmap generated by DeepGuard's EfficientNet-B0
+                        model to visualize regions that influenced its
+                        classification.
+                    </p>
+                </div>
+
             </div>
 
-            <!-- SIGHTENGINE PREDICTION ONLY -->
-            {% set status = prediction | upper %}
+            <!-- Prediction display -->
+            {% set status = prediction | upper | trim %}
 
             {% if status in ["AUTHENTIC", "REAL"] %}
                 {% set result_class = "real" %}
-                {% set result_message =
-                    "The image was classified as AUTHENTIC by the external detector. This result is not a guarantee of authenticity."
-                %}
                 {% set display_status = "AUTHENTIC" %}
+                {% set result_message =
+                    "DeepGuard classifies this image as AUTHENTIC."
+                %}
 
             {% elif status in ["MANIPULATED", "FAKE", "ARTIFICIAL"] %}
                 {% set result_class = "fake" %}
-                {% set result_message =
-                    "The image was classified as MANIPULATED by the external detector. Automated detection can make mistakes."
-                %}
                 {% set display_status = "MANIPULATED" %}
+                {% set result_message =
+                    "DeepGuard classifies this image as MANIPULATED."
+                %}
 
             {% else %}
                 {% set result_class = "unknown" %}
-                {% set result_message =
-                    "The detector returned an unrecognized status. No authentic or manipulated conclusion is displayed."
-                %}
                 {% set display_status = status %}
+                {% set result_message =
+                    "The image could not be assigned a recognized classification."
+                %}
             {% endif %}
 
             <div class="prediction-section {{ result_class }}">
+
                 <span class="prediction-label">
-                    IMAGE PREDICTION
+                    EFFICIENTNET-B0 PREDICTION
                 </span>
 
                 <div class="prediction-value">
@@ -363,44 +449,39 @@
                 <p class="prediction-message">
                     {{ result_message }}
                 </p>
+
             </div>
 
+            <!-- Navigation -->
             <div class="result-actions">
-                <a
-                    href="{{ url_for('detect_page') }}"
-                    class="primary-button"
-                >
+
+                <a href="{{ url_for('detect_page') }}"
+                   class="primary-button">
                     Analyze Another Image
                 </a>
 
-                <a
-                    href="{{ url_for('home') }}"
-                    class="secondary-button"
-                >
+                <a href="{{ url_for('home') }}"
+                   class="secondary-button">
                     Back to Home
                 </a>
+
             </div>
+
         </section>
 
-        <!-- YOUR TRAINED MODEL DETAILS -->
+        <!-- Model performance -->
         <section class="performance-card">
 
-            <span class="performance-label">
-                OUR TRAINED MODEL
-            </span>
+            <span class="performance-label">OUR TRAINED MODEL</span>
 
             <h3 class="performance-title">
                 EfficientNet-B0 Deepfake Classifier
             </h3>
 
             <p class="performance-description">
-                DeepGuard includes a locally trained EfficientNet-B0
-                image classifier initialized with pretrained ImageNet
-                weights and fine-tuned for REAL and FAKE image
-                classification. The metrics below describe this
-                model's independent test-set evaluation. They are not
-                the metrics or confidence of the external prediction
-                displayed above.
+                DeepGuard uses a trained EfficientNet-B0 model to classify
+                images as AUTHENTIC or MANIPULATED. The metrics below
+                represent the model's performance on the test dataset.
             </p>
 
             <div class="result-metrics">
@@ -427,52 +508,53 @@
 
             </div>
 
-            <!-- CONFUSION MATRIX -->
-            <h4 class="confusion-heading">
-                Confusion Matrix
-            </h4>
+            <!-- Confusion matrix -->
+            <h4 class="confusion-heading">Confusion Matrix</h4>
 
             <p class="confusion-description">
-                Counts of actual labels compared with the locally
-                trained model's predictions.
+                Counts of actual labels compared with the locally trained
+                model's predictions.
             </p>
 
             <table class="confusion-table">
+
                 <thead>
                     <tr>
                         <th>Actual / Predicted</th>
-                        <th>REAL</th>
-                        <th>FAKE</th>
+                        <th>AUTHENTIC</th>
+                        <th>MANIPULATED</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr>
-                        <td>REAL</td>
+                        <td>AUTHENTIC</td>
                         <td>134</td>
                         <td>16</td>
                     </tr>
 
                     <tr>
-                        <td>FAKE</td>
+                        <td>MANIPULATED</td>
                         <td>15</td>
                         <td>191</td>
                     </tr>
                 </tbody>
+
             </table>
 
             <p class="performance-footnote">
-                Test set: 356 images (150 REAL and 206 FAKE).
-                Best checkpoint: Epoch 5. These figures describe
-                the trained EfficientNet-B0 model's performance on
-                this particular dataset and may not generalize to
-                other image sources.
+                Test set: 356 images (150 AUTHENTIC and 206 MANIPULATED).
+                Best checkpoint: Epoch 5. These figures describe the
+                trained EfficientNet-B0 model's performance on this
+                particular dataset and may not generalize to other
+                image sources.
             </p>
 
         </section>
+
     </div>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
     <footer class="site-footer">
         <p>DeepGuard &copy; 2026</p>
         <p>Deep Learning Based Image Authentication</p>

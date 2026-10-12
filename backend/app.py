@@ -1,6 +1,10 @@
+
+import sys
 from pathlib import Path
 
 import cv2
+from PIL import Image
+from torchvision import transforms
 
 from flask import (
     Flask,
@@ -12,25 +16,46 @@ from flask import (
     send_from_directory,
 )
 
-from config import (
-    MAX_CONTENT_LENGTH,
-    ALLOWED_EXTENSIONS,
-    UPLOAD_DIR,
-)
-
-from api import api
-from external_detector import analyze_image_sync
-from utils import save_uploaded_file
-
-
 # ============================================================
 # PROJECT PATHS
 # ============================================================
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
 TEMPLATE_DIR = PROJECT_ROOT / "frontend" / "templates"
 STATIC_DIR = PROJECT_ROOT / "frontend" / "static"
+
+# ============================================================
+# IMPORTS
+# ============================================================
+
+from backend.config import (
+    MAX_CONTENT_LENGTH,
+    ALLOWED_EXTENSIONS,
+    UPLOAD_DIR,
+)
+
+from backend.api import api
+from backend.external_detector import analyze_image_sync
+from backend.utils import save_uploaded_file
+from backend.model import load_model
+
+
+# ============================================================
+# HEATMAP PREPROCESSING
+# ============================================================
+
+IMAGE_TRANSFORM = transforms.Compose([
+    transforms.Resize((224, 224)),
+    transforms.ToTensor(),
+    transforms.Normalize(
+        mean=[0.485, 0.456, 0.406],
+        std=[0.229, 0.224, 0.225],
+    ),
+])
 
 
 # ============================================================
@@ -48,11 +73,13 @@ def create_app():
     app.config["MAX_CONTENT_LENGTH"] = MAX_CONTENT_LENGTH
     app.secret_key = "deepguard-local-development-key"
 
-    # Register the existing REST API.
     app.register_blueprint(api)
 
+    # Load the local explanation model once.
+    heatmap_model = load_model()
+
     # --------------------------------------------------------
-    # HOME PAGE
+    # HOME
     # --------------------------------------------------------
 
     @app.route("/")
@@ -60,7 +87,7 @@ def create_app():
         return render_template("home.html")
 
     # --------------------------------------------------------
-    # IMAGE UPLOAD PAGE
+    # UPLOAD PAGE
     # --------------------------------------------------------
 
     @app.route("/detect")
@@ -68,7 +95,7 @@ def create_app():
         return render_template("detect.html")
 
     # --------------------------------------------------------
-    # REALITY DEFENDER IMAGE ANALYSIS
+    # PREDICT + GENERATE HEATMAP
     # --------------------------------------------------------
 
     @app.route("/web-predict", methods=["POST"])
@@ -95,10 +122,9 @@ def create_app():
                 flash("Please upload a JPG, JPEG, PNG, or WEBP image.")
                 return redirect(url_for("detect_page"))
 
-            # Save the uploaded image.
-            image_path = save_uploaded_file(uploaded_file)
+            image_path = Path(save_uploaded_file(uploaded_file))
 
-            # Validate that the saved file is a readable image.
+            # Validate uploaded image.
             image = cv2.imread(str(image_path))
 
             if image is None:
@@ -106,41 +132,61 @@ def create_app():
                 flash("The uploaded file is not a valid readable image.")
                 return redirect(url_for("detect_page"))
 
-            # Reality Defender is the sole prediction source
-            # for the website's result page.
+            # Reality Defender remains the prediction source.
             external_result = analyze_image_sync(str(image_path))
-
             status = external_result.get("status")
-            score = external_result.get("score")
 
             if not status:
                 raise RuntimeError(
                     "Reality Defender did not return a detection status."
                 )
 
-            # Display the provider's status and score.
+            # Generate a separate local-model explanation.
+            with Image.open(image_path) as source:
+                image_rgb = source.convert("RGB")
+                image_tensor = IMAGE_TRANSFORM(image_rgb)
+
+            local_prediction = heatmap_model.predict(image_tensor)
+
+            heatmap_path = (
+                Path(UPLOAD_DIR)
+                / f"{image_path.stem}_heatmap.jpg"
+            )
+
+            heatmap_model.generate_heatmap(
+                image_tensor=image_tensor,
+                original_image_path=image_path,
+                output_path=heatmap_path,
+                target_class=local_prediction,
+            )
+
+            # Do not pass the numerical Reality Defender score.
             return render_template(
                 "result.html",
                 prediction=status,
-                score=score,
                 image_filename=image_path.name,
+                heatmap_filename=heatmap_path.name,
                 result_provider="Reality Defender",
+                local_explanation_label=(
+                    "REAL" if local_prediction == 0 else "FAKE"
+                ),
             )
 
         except ValueError as error:
+            app.logger.warning("Image analysis input error: %s", error)
             flash(str(error))
             return redirect(url_for("detect_page"))
 
         except Exception:
-            app.logger.exception("Reality Defender image analysis failed")
+            app.logger.exception("DeepGuard image analysis failed")
             flash(
-                "Reality Defender could not analyze this image. "
-                "Please try again later."
+                "Image analysis or heatmap generation failed. "
+                "Please try again."
             )
             return redirect(url_for("detect_page"))
 
     # --------------------------------------------------------
-    # DISPLAY UPLOADED IMAGE
+    # SERVE UPLOADED IMAGES AND HEATMAPS
     # --------------------------------------------------------
 
     @app.route("/uploads/<path:filename>")
