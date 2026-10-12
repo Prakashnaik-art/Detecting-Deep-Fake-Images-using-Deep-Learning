@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyze Image | DeepGuard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="page-container">
+
+        <header class="site-header">
+            <a class="brand" href="{{ url_for('home') }}">
+                <span class="brand-icon">DG</span>
+                <span>DeepGuard</span>
+            </a>
+
+            <a class="header-link" href="{{ url_for('home') }}">
+                Home
+            </a>
+        </header>
+
+        <main class="upload-page">
+            <div class="page-heading">
+                <span class="hero-badge">AI-POWERED DETECTION</span>
+                <h1>Analyze an Image</h1>
+                <p>
+                    Upload an image containing a face and let DeepGuard
+                    analyze whether it appears real or manipulated.
+                </p>
+            </div>
+
+            <!-- Display backend messages after an upload or prediction error -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages" role="alert">
+                        {% for category, message in messages %}
+                            <div class="flash-message {{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <section class="upload-card">
+                <div class="upload-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M12 16V4M7 9l5-5 5 5"
+                              stroke="currentColor"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M5 14v4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4"
+                              stroke="currentColor"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <h2>Upload your image</h2>
+                <p class="upload-description">
+                    Select a JPG, JPEG, PNG, or WEBP image.
+                    Maximum file size: 16 MB.
+                </p>
+
+                <form id="upload-form"
+                      action="{{ url_for('web_predict') }}"
+                      method="POST"
+                      enctype="multipart/form-data">
+
+                    <label class="file-drop-area" for="image">
+                        <span class="file-drop-title">
+                            Choose an image to analyze
+                        </span>
+                        <span class="file-drop-subtitle">
+                            Click below to browse your files
+                        </span>
+
+                        <input
+                            type="file"
+                            id="image"
+                            name="file"
+                            accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
+                            required
+                        >
+                    </label>
+
+                    <p id="file-name" class="file-name">
+                        No image selected
+                    </p>
+
+                    <p id="client-error"
+                       class="client-error"
+                       role="alert"
+                       hidden></p>
+
+                    <button
+                        type="submit"
+                        id="analyze-button"
+                        class="primary-button analyze-button">
+                        Analyze Image
+                    </button>
+                </form>
+
+                <div class="privacy-note">
+                    <span aria-hidden="true">🔒</span>
+                    Your image is processed by the DeepGuard application.
+                </div>
+            </section>
+
+            <div class="upload-tips">
+                <div class="tip-item">
+                    <span class="tip-number">01</span>
+                    <div>
+                        <h3>Choose a clear image</h3>
+                        <p>Use an image with a visible face.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <span class="tip-number">02</span>
+                    <div>
+                        <h3>Run the analysis</h3>
+                        <p>DeepGuard will examine the detected face.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <span class="tip-number">03</span>
+                    <div>
+                        <h3>View your result</h3>
+                        <p>See the overall REAL or FAKE prediction.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>DeepGuard &copy; 2026. Deepfake Image Detection System.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const form = document.getElementById("upload-form");
+        const imageInput = document.getElementById("image");
+        const fileName = document.getElementById("file-name");
+        const clientError = document.getElementById("client-error");
+        const analyzeButton = document.getElementById("analyze-button");
+
+        const allowedExtensions = ["jpg", "jpeg", "png", "webp"];
+        const maxFileSize = 16 * 1024 * 1024;
+
+        imageInput.addEventListener("change", function () {
+            clientError.textContent = "";
+            clientError.hidden = true;
+            analyzeButton.disabled = false;
+            analyzeButton.textContent = "Analyze Image";
+
+            if (!imageInput.files.length) {
+                fileName.textContent = "No image selected";
+                return;
+            }
+
+            const file = imageInput.files[0];
+            const extension = file.name.split(".").pop().toLowerCase();
+
+            fileName.textContent = file.name;
+
+            if (!allowedExtensions.includes(extension)) {
+                showError("Unsupported file type. Please select JPG, JPEG, PNG, or WEBP.");
+                imageInput.value = "";
+                fileName.textContent = "No image selected";
+                return;
+            }
+
+            if (file.size > maxFileSize) {
+                showError("The image exceeds the 16 MB upload limit.");
+                imageInput.value = "";
+                fileName.textContent = "No image selected";
+            }
+        });
+
+        form.addEventListener("submit", function (event) {
+            clientError.textContent = "";
+            clientError.hidden = true;
+
+            if (!imageInput.files.length) {
+                event.preventDefault();
+                showError("Please select an image before analyzing.");
+                return;
+            }
+
+            const file = imageInput.files[0];
+            const extension = file.name.split(".").pop().toLowerCase();
+
+            if (!allowedExtensions.includes(extension)) {
+                event.preventDefault();
+                showError("Please select a JPG, JPEG, PNG, or WEBP image.");
+                return;
+            }
+
+            if (file.size > maxFileSize) {
+                event.preventDefault();
+                showError("The image exceeds the 16 MB upload limit.");
+                return;
+            }
+
+            analyzeButton.disabled = true;
+            analyzeButton.textContent = "Analyzing Image...";
+        });
+
+        function showError(message) {
+            clientError.textContent = message;
+            clientError.hidden = false;
+        }
+    </script>
+</body>
+</html>

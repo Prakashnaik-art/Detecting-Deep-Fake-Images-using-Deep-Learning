@@ -1,0 +1,2494 @@
+[
+    {
+        "path": "original\\791.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "791",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\089.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "089",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\658.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "658",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\06_02__podium_speech_happy__N8OSN8P6.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_02__podium_speech_happy__N8OSN8P6.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\067.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "067",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\665.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "665",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\21_02__talking_angry_couch__Z0XHPQAR.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "21_02__talking_angry_couch__Z0XHPQAR.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\511.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "511",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\233.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "233",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\429.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "429",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\09_11__talking_against_wall__INNOT5UE.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "09_11__talking_against_wall__INNOT5UE.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\06_27__walking_and_outside_surprised__O7L5Z9U8.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_27__walking_and_outside_surprised__O7L5Z9U8.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\27_25__walking_outside_cafe_disgusted__1KU29EUL.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "27_25__walking_outside_cafe_disgusted__1KU29EUL.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "FaceSwap\\167_166.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "167_166",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "FaceShifter\\159_175.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "159_175",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "NeuralTextures\\758_754.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "758_754",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "original\\274.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "274",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "NeuralTextures\\854_747.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "854_747",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "DeepFakeDetection\\22_10__walking_and_outside_surprised__C1U7OY5M.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "22_10__walking_and_outside_surprised__C1U7OY5M.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\02_03__walking_down_street_outside_angry__QH3Y0IG0.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_03__walking_down_street_outside_angry__QH3Y0IG0.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\01_20__kitchen_pan__6UBMLXK3.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "01_20__kitchen_pan__6UBMLXK3.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\14_03__exit_phone_room__KJ221YN0.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "14_03__exit_phone_room__KJ221YN0.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "NeuralTextures\\025_067.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "025_067",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "original\\970.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "970",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\01_15__meeting_serious__02HILKYO.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "01_15__meeting_serious__02HILKYO.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\18_26__walk_down_hall_angry__AI94QW74.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "18_26__walk_down_hall_angry__AI94QW74.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "Face2Face\\747_854.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "747_854",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "FaceSwap\\758_754.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "758_754",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "original\\986.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "986",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\623.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "623",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\27_02__kitchen_pan__3L1MLH3D.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "27_02__kitchen_pan__3L1MLH3D.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\470.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "470",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\643.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "643",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\03_06__meeting_serious__83ABVHC3.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "03_06__meeting_serious__83ABVHC3.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\20_01__kitchen_still__FW94AIMJ.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "20_01__kitchen_still__FW94AIMJ.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\389.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "389",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\17_16__walk_down_hall_angry__P141P1QH.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "17_16__walk_down_hall_angry__P141P1QH.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "Face2Face\\671_677.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "671_677",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "original\\071.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "071",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceSwap\\159_175.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "159_175",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "DeepFakeDetection\\18_15__outside_talking_still_laughing__V5VHLCOW.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "18_15__outside_talking_still_laughing__V5VHLCOW.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\603.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "603",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\01_03__kitchen_pan__JZUXXFRB.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "01_03__kitchen_pan__JZUXXFRB.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\14_20__hugging_happy__B014BKVO.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "14_20__hugging_happy__B014BKVO.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\663.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "663",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\907.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "907",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\25_15__walk_down_hall_angry__BXVA6VQB.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "25_15__walk_down_hall_angry__BXVA6VQB.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\718.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "718",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\11_21__kitchen_pan__T7DK03O1.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "11_21__kitchen_pan__T7DK03O1.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\02_09__walking_down_street_outside_angry__6KUOFMZW.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_09__walking_down_street_outside_angry__6KUOFMZW.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\02_06__walking_down_indoor_hall_disgust__U6MDWIHG.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_06__walking_down_indoor_hall_disgust__U6MDWIHG.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\825.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "825",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\10_19__walking_down_street_outside_angry__IDX76N5R.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "10_19__walking_down_street_outside_angry__IDX76N5R.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "Face2Face\\986_994.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "986_994",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "DeepFakeDetection\\16_05__outside_talking_pan_laughing__053HPS1G.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "16_05__outside_talking_pan_laughing__053HPS1G.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\094.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "094",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\618.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "618",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\05_16__walking_down_street_outside_angry__OSXCUOHX.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "05_16__walking_down_street_outside_angry__OSXCUOHX.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\276.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "276",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\363.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "363",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\17_08__hugging_happy__05AN86QA.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "17_08__hugging_happy__05AN86QA.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\18_06__kitchen_pan__XJ76YU5A.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "18_06__kitchen_pan__XJ76YU5A.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\714.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "714",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\05_16__walk_down_hall_angry__U9WZI5LK.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "05_16__walk_down_hall_angry__U9WZI5LK.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "FaceShifter\\175_159.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "175_159",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "original\\650.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "650",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\06_03__talking_against_wall__4I8LRXWF.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_03__talking_against_wall__4I8LRXWF.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\127.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "127",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\203.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "203",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\616.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "616",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\654.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "654",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\02_15__exit_phone_room__MZWH8ATN.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_15__exit_phone_room__MZWH8ATN.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\990.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "990",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\20_09__walk_down_hall_angry__RAGUKRMK.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "20_09__walk_down_hall_angry__RAGUKRMK.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\09_20__podium_speech_happy__RAGUKRMK.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "09_20__podium_speech_happy__RAGUKRMK.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\04_21__talking_angry_couch__5Y31RZP8.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "04_21__talking_angry_couch__5Y31RZP8.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "FaceShifter\\166_167.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "166_167",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "NeuralTextures\\159_175.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "159_175",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "Face2Face\\159_175.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "159_175",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "Face2Face\\854_747.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "854_747",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "original\\671.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "671",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\250.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "250",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\02_15__walking_and_outside_surprised__MZWH8ATN.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_15__walking_and_outside_surprised__MZWH8ATN.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\469.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "469",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\10_23__outside_talking_pan_laughing__ZHJO34DY.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "10_23__outside_talking_pan_laughing__ZHJO34DY.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\379.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "379",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceSwap\\671_677.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "671_677",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "NeuralTextures\\986_994.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "986_994",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "original\\824.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "824",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\841.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "841",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\027.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "027",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\27_18__kitchen_pan__BSOLX3SI.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "27_18__kitchen_pan__BSOLX3SI.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "Face2Face\\067_025.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "067_025",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "original\\733.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "733",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\15_02__talking_against_wall__HTG660F8.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "15_02__talking_against_wall__HTG660F8.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\721.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "721",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\166.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "166",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\06_26__talking_angry_couch__L5BVR5L9.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_26__talking_angry_couch__L5BVR5L9.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\103.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "103",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\284.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "284",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\19_23__walk_down_hall_angry__F7U8UY7V.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "19_23__walk_down_hall_angry__F7U8UY7V.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\19_23__outside_talking_pan_laughing__H4SUVFTL.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "19_23__outside_talking_pan_laughing__H4SUVFTL.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\854.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "854",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\02_15__outside_talking_pan_laughing__SB6PMCO0.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_15__outside_talking_pan_laughing__SB6PMCO0.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\459.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "459",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\13_02__exit_phone_room__CP5HFV3K.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "13_02__exit_phone_room__CP5HFV3K.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "NeuralTextures\\747_854.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "747_854",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "FaceSwap\\754_758.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "754_758",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "original\\570.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "570",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\906.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "906",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\747.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "747",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\551.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "551",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\09_03__kitchen_pan__8DTEGQ54.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "09_03__kitchen_pan__8DTEGQ54.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\18_03__kitchen_still__22UBC0BS.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "18_03__kitchen_still__22UBC0BS.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\978.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "978",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\15_12__talking_angry_couch__RK17XFJ9.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "15_12__talking_angry_couch__RK17XFJ9.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\352.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "352",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\27_26__meeting_serious__IE9N0ZI9.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "27_26__meeting_serious__IE9N0ZI9.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\18_11__secret_conversation__PT4YKO2R.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "18_11__secret_conversation__PT4YKO2R.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\22_19__walk_down_hall_angry__VK6BF5NV.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "22_19__walk_down_hall_angry__VK6BF5NV.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\22_23__kitchen_pan__TU7RHG0S.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "22_23__kitchen_pan__TU7RHG0S.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "Face2Face\\754_758.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "754_758",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "original\\273.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "273",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\20_27__kitchen_pan__LM907ECA.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "20_27__kitchen_pan__LM907ECA.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\332.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "332",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\604.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "604",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\281.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "281",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\23_22__kitchen_still__X2ZN5Q31.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "23_22__kitchen_still__X2ZN5Q31.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\02_15__talking_angry_couch__HTG660F8.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_15__talking_angry_couch__HTG660F8.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\15_03__kitchen_pan__DG8ITQO3.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "15_03__kitchen_pan__DG8ITQO3.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\735.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "735",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\270.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "270",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\09_02__exit_phone_room__6KUOFMZW.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "09_02__exit_phone_room__6KUOFMZW.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "NeuralTextures\\671_677.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "671_677",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "FaceSwap\\986_994.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "986_994",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "NeuralTextures\\166_167.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "166_167",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "original\\580.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "580",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceSwap\\747_854.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "747_854",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "DeepFakeDetection\\01_20__outside_talking_still_laughing__FW94AIMJ.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "01_20__outside_talking_still_laughing__FW94AIMJ.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\754.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "754",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\09_20__walk_down_hall_angry__MKEWB4SM.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "09_20__walk_down_hall_angry__MKEWB4SM.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\099.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "099",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\18_04__walking_outside_cafe_disgusted__6J3ZFEJQ.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "18_04__walking_outside_cafe_disgusted__6J3ZFEJQ.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\11_07__kitchen_still__R7R86Z62.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "11_07__kitchen_still__R7R86Z62.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "FaceSwap\\067_025.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "067_025",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "DeepFakeDetection\\24_19__secret_conversation__LVZNRK9S.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "24_19__secret_conversation__LVZNRK9S.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\06_07__outside_talking_pan_laughing__NMGYPBXE.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_07__outside_talking_pan_laughing__NMGYPBXE.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\20_01__walking_and_outside_surprised__6UBMLXK3.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "20_01__walking_and_outside_surprised__6UBMLXK3.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\296.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "296",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\20_09__walking_down_indoor_hall_disgust__RAGUKRMK.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "20_09__walking_down_indoor_hall_disgust__RAGUKRMK.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\348.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "348",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\02_09__kitchen_pan__9TDCEK1Q.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_09__kitchen_pan__9TDCEK1Q.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\12_14__walk_down_hall_angry__Z7EWFA0P.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "12_14__walk_down_hall_angry__Z7EWFA0P.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\216.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "216",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\07_06__kitchen_pan__NMGYPBXE.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "07_06__kitchen_pan__NMGYPBXE.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\05_28__kitchen_still__W3J028UG.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "05_28__kitchen_still__W3J028UG.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "FaceShifter\\677_671.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "677_671",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "DeepFakeDetection\\21_07__talking_against_wall__CRGVSDBI.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "21_07__talking_against_wall__CRGVSDBI.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\23_24__talking_angry_couch__MDSDXSNU.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "23_24__talking_angry_couch__MDSDXSNU.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\964.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "964",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\974.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "974",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceShifter\\754_758.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "754_758",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "original\\699.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "699",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\057.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "057",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\25_06__outside_talking_pan_laughing__MI9BDQ7M.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "25_06__outside_talking_pan_laughing__MI9BDQ7M.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\18_14__outside_talking_still_laughing__6SB2BR0A.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "18_14__outside_talking_still_laughing__6SB2BR0A.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\03_15__kitchen_pan__AIOM1U5V.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "03_15__kitchen_pan__AIOM1U5V.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\26_25__outside_talking_pan_laughing__157Z8P8P.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "26_25__outside_talking_pan_laughing__157Z8P8P.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\875.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "875",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\686.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "686",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceShifter\\854_747.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "854_747",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "original\\387.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "387",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\25_26__walking_outside_cafe_disgusted__7ZRKCFMS.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "25_26__walking_outside_cafe_disgusted__7ZRKCFMS.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\228.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "228",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\28_08__kitchen_pan__GQN9WHLD.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "28_08__kitchen_pan__GQN9WHLD.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\344.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "344",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\073.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "073",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "NeuralTextures\\167_166.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "167_166",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "FaceShifter\\025_067.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "025_067",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "DeepFakeDetection\\27_25__exit_phone_room__1KU29EUL.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "27_25__exit_phone_room__1KU29EUL.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "FaceSwap\\854_747.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "854_747",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "original\\238.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "238",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\14_18__kitchen_still__A5A1Q467.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "14_18__kitchen_still__A5A1Q467.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\28_08__outside_talking_pan_laughing__GGCUYQA4.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "28_08__outside_talking_pan_laughing__GGCUYQA4.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\410.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "410",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\781.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "781",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\549.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "549",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "Face2Face\\166_167.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "166_167",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "DeepFakeDetection\\09_18__walking_down_street_outside_angry__3VP8836C.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "09_18__walking_down_street_outside_angry__3VP8836C.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\06_26__talking_against_wall__L5BVR5L9.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_26__talking_against_wall__L5BVR5L9.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\19_10__podium_speech_happy__FFXB67PI.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "19_10__podium_speech_happy__FFXB67PI.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\214.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "214",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\701.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "701",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\10_23__outside_talking_pan_laughing__CU6SNBFZ.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "10_23__outside_talking_pan_laughing__CU6SNBFZ.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\26_25__walking_outside_cafe_disgusted__0UFFR3U1.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "26_25__walking_outside_cafe_disgusted__0UFFR3U1.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\20_21__walking_down_street_outside_angry__ZCB5OMEW.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "20_21__walking_down_street_outside_angry__ZCB5OMEW.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\252.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "252",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "Face2Face\\758_754.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "758_754",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "DeepFakeDetection\\15_21__kitchen_pan__87WSBJP3.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "15_21__kitchen_pan__87WSBJP3.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\175.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "175",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\02_09__talking_angry_couch__6KUOFMZW.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_09__talking_angry_couch__6KUOFMZW.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "Face2Face\\175_159.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "175_159",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "Face2Face\\677_671.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "677_671",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "DeepFakeDetection\\06_07__talking_against_wall__NMGYPBXE.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_07__talking_against_wall__NMGYPBXE.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\300.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "300",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\07_21__talking_against_wall__MKU99DVX.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "07_21__talking_against_wall__MKU99DVX.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\03_18__walking_and_outside_surprised__8HNSXOBW.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "03_18__walking_and_outside_surprised__8HNSXOBW.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\432.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "432",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\759.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "759",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\565.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "565",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\02_27__hugging_happy__GVFLSZD5.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_27__hugging_happy__GVFLSZD5.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\21_07__exit_phone_room__MKU99DVX.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "21_07__exit_phone_room__MKU99DVX.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\03_13__kitchen_pan__GBYWJW06.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "03_13__kitchen_pan__GBYWJW06.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\19_24__kitchen_pan__NPZW2Z9L.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "19_24__kitchen_pan__NPZW2Z9L.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\22_10__walk_down_hall_angry__FY7YI0AJ.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "22_10__walk_down_hall_angry__FY7YI0AJ.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\14_26__secret_conversation__SU8SAHTT.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "14_26__secret_conversation__SU8SAHTT.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\12_13__walk_down_hall_angry__6G44TDN4.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "12_13__walk_down_hall_angry__6G44TDN4.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\405.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "405",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\473.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "473",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\20_18__walking_down_indoor_hall_disgust__8BMQOD7S.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "20_18__walking_down_indoor_hall_disgust__8BMQOD7S.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\220.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "220",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceSwap\\175_159.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "175_159",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "original\\746.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "746",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\07_04__exit_phone_room__QKCCFKBT.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "07_04__exit_phone_room__QKCCFKBT.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\983.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "983",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "NeuralTextures\\067_025.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "067_025",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "original\\114.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "114",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\02_13__outside_talking_pan_laughing__2YSYT2N3.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_13__outside_talking_pan_laughing__2YSYT2N3.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\07_02__talking_angry_couch__1H07DFQJ.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "07_02__talking_angry_couch__1H07DFQJ.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\24_19__walk_down_hall_angry__OF8LF68K.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "24_19__walk_down_hall_angry__OF8LF68K.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\223.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "223",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\863.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "863",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\163.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "163",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\992.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "992",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\142.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "142",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceShifter\\994_986.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "994_986",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "original\\777.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "777",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\655.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "655",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\13_07__secret_conversation__RVQCPCJF.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "13_07__secret_conversation__RVQCPCJF.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "FaceShifter\\067_025.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "067_025",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "DeepFakeDetection\\20_13__walking_down_indoor_hall_disgust__VO2YZXLN.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "20_13__walking_down_indoor_hall_disgust__VO2YZXLN.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\887.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "887",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\14_01__talking_angry_couch__0S0NS5C6.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "14_01__talking_angry_couch__0S0NS5C6.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\23_19__hugging_happy__H4SUVFTL.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "23_19__hugging_happy__H4SUVFTL.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\07_03__hugging_happy__7NGMD8FT.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "07_03__hugging_happy__7NGMD8FT.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\08_05__walk_down_hall_angry__FBICSP2C.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "08_05__walk_down_hall_angry__FBICSP2C.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\080.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "080",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\02_13__meeting_serious__CP5HFV3K.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_13__meeting_serious__CP5HFV3K.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\464.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "464",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceShifter\\167_166.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "167_166",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "original\\225.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "225",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\03_26__kitchen_pan__WBSXBL82.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "03_26__kitchen_pan__WBSXBL82.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\26_03__kitchen_pan__WBSXBL82.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "26_03__kitchen_pan__WBSXBL82.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\20_13__walking_down_indoor_hall_disgust__NJEO6L5O.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "20_13__walking_down_indoor_hall_disgust__NJEO6L5O.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\24_22__walking_outside_cafe_disgusted__XL557XC6.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "24_22__walking_outside_cafe_disgusted__XL557XC6.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\28_08__exit_phone_room__5DCAESDA.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "28_08__exit_phone_room__5DCAESDA.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\794.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "794",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\704.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "704",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\323.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "323",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "NeuralTextures\\677_671.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "677_671",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "Face2Face\\025_067.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "025_067",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "original\\006.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "006",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\14_21__podium_speech_happy__IRKML4J0.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "14_21__podium_speech_happy__IRKML4J0.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\15_06__exit_phone_room__E98QYYXO.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "15_06__exit_phone_room__E98QYYXO.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\20_21__kitchen_still__ZCB5OMEW.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "20_21__kitchen_still__ZCB5OMEW.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\786.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "786",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\081.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "081",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\06_15__outside_talking_still_laughing__QRCD27P8.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_15__outside_talking_still_laughing__QRCD27P8.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\030.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "030",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\546.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "546",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\03_15__outside_talking_pan_laughing__Y11NT1YX.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "03_15__outside_talking_pan_laughing__Y11NT1YX.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\677.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "677",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\18_09__walking_outside_cafe_disgusted__3VP8836C.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "18_09__walking_outside_cafe_disgusted__3VP8836C.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\04_12__walking_down_street_outside_angry__96TQKDFJ.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "04_12__walking_down_street_outside_angry__96TQKDFJ.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\05_28__walking_outside_cafe_disgusted__2DK5X0Y0.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "05_28__walking_outside_cafe_disgusted__2DK5X0Y0.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\826.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "826",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "NeuralTextures\\175_159.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "175_159",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "original\\994.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "994",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\692.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "692",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\28_05__kitchen_pan__W3J028UG.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "28_05__kitchen_pan__W3J028UG.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\032.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "032",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\15_20__outside_talking_still_laughing__99NHTFBM.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "15_20__outside_talking_still_laughing__99NHTFBM.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\271.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "271",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceSwap\\166_167.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "166_167",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "NeuralTextures\\754_758.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "754_758",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "original\\982.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "982",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\15_02__hugging_happy__SB6PMCO0.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "15_02__hugging_happy__SB6PMCO0.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\224.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "224",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "Face2Face\\994_986.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "994_986",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "DeepFakeDetection\\19_24__walk_down_hall_angry__OF8LF68K.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "19_24__walk_down_hall_angry__OF8LF68K.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\06_15__kitchen_still__QRCD27P8.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_15__kitchen_still__QRCD27P8.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\02_15__outside_talking_pan_laughing__I8G2LWD1.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_15__outside_talking_pan_laughing__I8G2LWD1.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\05_17__walking_outside_cafe_disgusted__C4VHXZFY.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "05_17__walking_outside_cafe_disgusted__C4VHXZFY.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\167.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "167",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\05_16__kitchen_still__B62WCGUN.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "05_16__kitchen_still__B62WCGUN.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\373.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "373",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\20_15__walking_down_indoor_hall_disgust__99NHTFBM.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "20_15__walking_down_indoor_hall_disgust__99NHTFBM.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\14_18__talking_angry_couch__A5A1Q467.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "14_18__talking_angry_couch__A5A1Q467.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\06_11__walking_and_outside_surprised__C8C4FW99.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_11__walking_and_outside_surprised__C8C4FW99.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\947.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "947",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "NeuralTextures\\994_986.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "994_986",
+        "dataset": "NeuralTextures"
+    },
+    {
+        "path": "DeepFakeDetection\\13_03__walking_down_indoor_hall_disgust__GBYWJW06.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "13_03__walking_down_indoor_hall_disgust__GBYWJW06.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\849.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "849",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceSwap\\025_067.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "025_067",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "original\\758.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "758",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\18_06__walking_down_street_outside_angry__MVXBDKGB.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "18_06__walking_down_street_outside_angry__MVXBDKGB.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\25_26__podium_speech_happy__PQ41U3IJ.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "25_26__podium_speech_happy__PQ41U3IJ.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\104.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "104",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\633.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "633",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\517.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "517",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "Face2Face\\167_166.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "167_166",
+        "dataset": "Face2Face"
+    },
+    {
+        "path": "FaceShifter\\747_854.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "747_854",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "DeepFakeDetection\\06_27__walking_outside_cafe_disgusted__VN14WY2N.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_27__walking_outside_cafe_disgusted__VN14WY2N.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\159.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "159",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\828.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "828",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\046.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "046",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\146.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "146",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\025.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "025",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\03_18__kitchen_pan__22UBC0BS.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "03_18__kitchen_pan__22UBC0BS.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\762.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "762",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\367.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "367",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\13_04__talking_angry_couch__00T3UYOR.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "13_04__talking_angry_couch__00T3UYOR.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\322.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "322",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\867.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "867",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\558.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "558",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceShifter\\758_754.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "758_754",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "DeepFakeDetection\\03_11__exit_phone_room__P08VGHTA.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "03_11__exit_phone_room__P08VGHTA.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\10_23__kitchen_pan__GYY4VANY.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "10_23__kitchen_pan__GYY4VANY.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\06_27__talking_angry_couch__JOG5PB18.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "06_27__talking_angry_couch__JOG5PB18.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\196.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "196",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceShifter\\671_677.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "671_677",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "DeepFakeDetection\\09_26__exit_phone_room__XXGYLT82.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "09_26__exit_phone_room__XXGYLT82.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\21_03__walking_down_street_outside_angry__YCSEBZO4.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "21_03__walking_down_street_outside_angry__YCSEBZO4.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\01_15__exit_phone_room__02HILKYO.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "01_15__exit_phone_room__02HILKYO.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\234.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "234",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\15_12__talking_angry_couch__N0SRODQD.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "15_12__talking_angry_couch__N0SRODQD.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\02_01__walking_down_indoor_hall_disgust__YVGY8LOK.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_01__walking_down_indoor_hall_disgust__YVGY8LOK.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\890.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "890",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\217.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "217",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\25_12__secret_conversation__0SA36BZ5.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "25_12__secret_conversation__0SA36BZ5.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\954.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "954",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\07_21__secret_conversation__CRGVSDBI.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "07_21__secret_conversation__CRGVSDBI.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "FaceSwap\\677_671.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "677_671",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "original\\095.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "095",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\370.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "370",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\913.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "913",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\388.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "388",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "FaceShifter\\986_994.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "986_994",
+        "dataset": "FaceShifter"
+    },
+    {
+        "path": "original\\591.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "591",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\882.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "882",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "DeepFakeDetection\\13_02__walking_down_indoor_hall_disgust__AROBAY8R.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "13_02__walking_down_indoor_hall_disgust__AROBAY8R.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "DeepFakeDetection\\02_15__walking_and_outside_surprised__I8G2LWD1.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "02_15__walking_and_outside_surprised__I8G2LWD1.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "FaceSwap\\994_986.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "994_986",
+        "dataset": "FaceSwap"
+    },
+    {
+        "path": "DeepFakeDetection\\27_03__walking_and_outside_surprised__KWGI1LSZ.mp4",
+        "label": 1,
+        "class": "FAKE",
+        "source_id": "27_03__walking_and_outside_surprised__KWGI1LSZ.mp4",
+        "dataset": "DeepFakeDetection"
+    },
+    {
+        "path": "original\\574.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "574",
+        "dataset": "FaceForensics++"
+    },
+    {
+        "path": "original\\044.mp4",
+        "label": 0,
+        "class": "REAL",
+        "source_id": "044",
+        "dataset": "FaceForensics++"
+    }
+]

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result | DeepGuard</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+    <style>
+        .result-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .result-card {
+            padding: 35px;
+            border-radius: 20px;
+            background: #ffffff;
+            color: #102030;
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.18);
+        }
+
+        .result-title {
+            margin-top: 20px;
+            font-size: 32px;
+            line-height: 1.2;
+        }
+
+        .result-description {
+            margin-top: 12px;
+            color: #66788a;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .image-preview {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 28px;
+            padding: 16px;
+            min-height: 180px;
+            border: 1px solid #dce5eb;
+            border-radius: 14px;
+            background: #f7fafc;
+        }
+
+        .image-preview img {
+            display: block;
+            max-width: 100%;
+            max-height: 500px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .prediction-section {
+            margin-top: 28px;
+            padding: 22px;
+            border-radius: 12px;
+        }
+
+        .prediction-section.real {
+            background: #ecfdf3;
+            border: 1px solid #bbf7d0;
+        }
+
+        .prediction-section.fake {
+            background: #fff1f2;
+            border: 1px solid #fecdd3;
+        }
+
+        .prediction-section.unknown {
+            background: #f1f5f9;
+            border: 1px solid #cbd5e1;
+        }
+
+        .prediction-label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .real .prediction-label,
+        .real .prediction-value {
+            color: #166534;
+        }
+
+        .fake .prediction-label,
+        .fake .prediction-value {
+            color: #991b1b;
+        }
+
+        .unknown .prediction-label,
+        .unknown .prediction-value {
+            color: #334155;
+        }
+
+        .prediction-value {
+            margin-top: 8px;
+            font-size: 32px;
+            font-weight: 800;
+            overflow-wrap: anywhere;
+        }
+
+        .prediction-message {
+            margin-top: 8px;
+            color: #526474;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .result-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .result-actions .primary-button {
+            margin-top: 0;
+        }
+
+        .secondary-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 22px;
+            border: 1px solid #dce5eb;
+            border-radius: 9px;
+            color: #344858;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 700;
+            transition: background 0.2s ease;
+        }
+
+        .secondary-button:hover {
+            background: #f1f5f9;
+        }
+
+        .performance-card {
+            margin-top: 28px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.045);
+        }
+
+        .performance-label {
+            color: #58d8d2;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+        }
+
+        .performance-title {
+            margin-top: 10px;
+            color: #ffffff;
+            font-size: 23px;
+            line-height: 1.4;
+        }
+
+        .performance-description {
+            margin-top: 10px;
+            color: #a9bac6;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .result-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        .result-metric {
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.055);
+        }
+
+        .result-metric span {
+            display: block;
+            color: #a9bac6;
+            font-size: 12px;
+        }
+
+        .result-metric strong {
+            display: block;
+            margin-top: 9px;
+            color: #ffffff;
+            font-size: 25px;
+        }
+
+        .confusion-heading {
+            margin-top: 30px;
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+        .confusion-description {
+            margin-top: 8px;
+            color: #a9bac6;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .confusion-table {
+            width: 100%;
+            margin-top: 16px;
+            border-collapse: collapse;
+            border-radius: 10px;
+            font-size: 13px;
+        }
+
+        .confusion-table th,
+        .confusion-table td {
+            padding: 14px 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .confusion-table th {
+            background: rgba(255, 255, 255, 0.09);
+            color: #d8e6ed;
+            font-weight: 700;
+        }
+
+        .confusion-table td {
+            background: rgba(255, 255, 255, 0.035);
+            color: #ffffff;
+        }
+
+        .confusion-table td:first-child {
+            font-weight: 700;
+        }
+
+        .performance-footnote {
+            margin-top: 18px;
+            color: #8fa5b3;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .site-footer {
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            .result-card {
+                padding: 24px;
+            }
+
+            .result-title {
+                font-size: 27px;
+            }
+
+            .result-metrics {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .performance-card {
+                padding: 22px;
+            }
+
+            .confusion-table th,
+            .confusion-table td {
+                padding: 10px 5px;
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .result-metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<main class="page-container">
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <a
+            href="{{ url_for('home') }}"
+            class="brand"
+            style="text-decoration:none;color:white;"
+        >
+            <div class="brand-icon">DG</div>
+            <div>
+                <h1>DeepGuard</h1>
+                <p>Deepfake Image Detection</p>
+            </div>
+        </a>
+    </header>
+
+    <div class="result-wrapper">
+
+        <!-- IMAGE RESULT -->
+        <section class="result-card">
+            <span class="hero-badge">ANALYSIS COMPLETE</span>
+
+            <h2 class="result-title">Image Analysis Result</h2>
+
+            <p class="result-description">
+                The prediction below is provided by the external
+                image analysis service. The trained model's evaluation
+                results are shown separately.
+            </p>
+
+            <div class="image-preview">
+                <img
+                    src="{{ url_for('uploaded_image', filename=image_filename) }}"
+                    alt="Image analyzed by DeepGuard"
+                >
+            </div>
+
+            <!-- SIGHTENGINE PREDICTION ONLY -->
+            {% set status = prediction | upper %}
+
+            {% if status in ["AUTHENTIC", "REAL"] %}
+                {% set result_class = "real" %}
+                {% set result_message =
+                    "The image was classified as AUTHENTIC by the external detector. This result is not a guarantee of authenticity."
+                %}
+                {% set display_status = "AUTHENTIC" %}
+
+            {% elif status in ["MANIPULATED", "FAKE", "ARTIFICIAL"] %}
+                {% set result_class = "fake" %}
+                {% set result_message =
+                    "The image was classified as MANIPULATED by the external detector. Automated detection can make mistakes."
+                %}
+                {% set display_status = "MANIPULATED" %}
+
+            {% else %}
+                {% set result_class = "unknown" %}
+                {% set result_message =
+                    "The detector returned an unrecognized status. No authentic or manipulated conclusion is displayed."
+                %}
+                {% set display_status = status %}
+            {% endif %}
+
+            <div class="prediction-section {{ result_class }}">
+                <span class="prediction-label">
+                    IMAGE PREDICTION
+                </span>
+
+                <div class="prediction-value">
+                    {{ display_status }}
+                </div>
+
+                <p class="prediction-message">
+                    {{ result_message }}
+                </p>
+            </div>
+
+            <div class="result-actions">
+                <a
+                    href="{{ url_for('detect_page') }}"
+                    class="primary-button"
+                >
+                    Analyze Another Image
+                </a>
+
+                <a
+                    href="{{ url_for('home') }}"
+                    class="secondary-button"
+                >
+                    Back to Home
+                </a>
+            </div>
+        </section>
+
+        <!-- YOUR TRAINED MODEL DETAILS -->
+        <section class="performance-card">
+
+            <span class="performance-label">
+                OUR TRAINED MODEL
+            </span>
+
+            <h3 class="performance-title">
+                EfficientNet-B0 Deepfake Classifier
+            </h3>
+
+            <p class="performance-description">
+                DeepGuard includes a locally trained EfficientNet-B0
+                image classifier initialized with pretrained ImageNet
+                weights and fine-tuned for REAL and FAKE image
+                classification. The metrics below describe this
+                model's independent test-set evaluation. They are not
+                the metrics or confidence of the external prediction
+                displayed above.
+            </p>
+
+            <div class="result-metrics">
+
+                <div class="result-metric">
+                    <span>Accuracy</span>
+                    <strong>91.29%</strong>
+                </div>
+
+                <div class="result-metric">
+                    <span>Precision</span>
+                    <strong>92.27%</strong>
+                </div>
+
+                <div class="result-metric">
+                    <span>Recall</span>
+                    <strong>92.72%</strong>
+                </div>
+
+                <div class="result-metric">
+                    <span>F1 Score</span>
+                    <strong>92.49%</strong>
+                </div>
+
+            </div>
+
+            <!-- CONFUSION MATRIX -->
+            <h4 class="confusion-heading">
+                Confusion Matrix
+            </h4>
+
+            <p class="confusion-description">
+                Counts of actual labels compared with the locally
+                trained model's predictions.
+            </p>
+
+            <table class="confusion-table">
+                <thead>
+                    <tr>
+                        <th>Actual / Predicted</th>
+                        <th>REAL</th>
+                        <th>FAKE</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>REAL</td>
+                        <td>134</td>
+                        <td>16</td>
+                    </tr>
+
+                    <tr>
+                        <td>FAKE</td>
+                        <td>15</td>
+                        <td>191</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="performance-footnote">
+                Test set: 356 images (150 REAL and 206 FAKE).
+                Best checkpoint: Epoch 5. These figures describe
+                the trained EfficientNet-B0 model's performance on
+                this particular dataset and may not generalize to
+                other image sources.
+            </p>
+
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>DeepGuard &copy; 2026</p>
+        <p>Deep Learning Based Image Authentication</p>
+    </footer>
+
+</main>
+</body>
+</html>

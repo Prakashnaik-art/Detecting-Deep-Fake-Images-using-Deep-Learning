@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DeepGuard | Deepfake Detection</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+</head>
+
+<body>
+
+    <main class="page-container">
+
+        <!-- ==================================================
+             HEADER
+        =================================================== -->
+
+        <header class="site-header">
+
+            <div class="brand">
+                <div class="brand-icon">
+                    DG
+                </div>
+
+                <div>
+                    <h1>DeepGuard</h1>
+
+                    <p>
+                        Deepfake Image Detection
+                    </p>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- ==================================================
+             HERO SECTION
+        =================================================== -->
+
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    AI-POWERED DETECTION
+                </span>
+
+                <h2>
+                    Detect Deepfakes<br>
+                    With Confidence
+                </h2>
+
+                <p class="hero-description">
+                    Upload an image and let DeepGuard analyze
+                    facial features using a deep learning model
+                    to determine whether the image is
+                    <strong>REAL</strong> or <strong>FAKE</strong>.
+                </p>
+
+                <a
+                    href="{{ url_for('detect_page') }}"
+                    class="primary-button"
+                >
+                    Analyze an Image
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 FEATURE CARD
+            =================================================== -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    AI
+                </div>
+
+                <h3>
+                    Intelligent Analysis
+                </h3>
+
+                <p>
+                    DeepGuard uses face detection and an
+                    EfficientNet-B0 deep learning model to
+                    analyze uploaded images.
+                </p>
+
+                <div class="feature-line"></div>
+
+                <div class="feature-item">
+                    <span>01</span>
+                    <p>Face Detection</p>
+                </div>
+
+                <div class="feature-item">
+                    <span>02</span>
+                    <p>Deep Learning Analysis</p>
+                </div>
+
+                <div class="feature-item">
+                    <span>03</span>
+                    <p>REAL / FAKE Result</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             MODEL PERFORMANCE
+        =================================================== -->
+
+        <section class="performance-section">
+
+            <div class="section-heading">
+
+                <span>
+                    MODEL PERFORMANCE
+                </span>
+
+                <h3>
+                    Tested on an Independent Test Set
+                </h3>
+
+            </div>
+
+
+            <div class="metrics-grid">
+
+                <div class="metric-card">
+                    <span>Accuracy</span>
+                    <strong>91.29%</strong>
+                </div>
+
+                <div class="metric-card">
+                    <span>Precision</span>
+                    <strong>92.27%</strong>
+                </div>
+
+                <div class="metric-card">
+                    <span>Recall</span>
+                    <strong>92.72%</strong>
+                </div>
+
+                <div class="metric-card">
+                    <span>F1 Score</span>
+                    <strong>92.49%</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             FOOTER
+        =================================================== -->
+
+        <footer class="site-footer">
+
+            <p>
+                DeepGuard &copy; 2026
+            </p>
+
+            <p>
+                Deep Learning Based Image Authentication
+            </p>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
